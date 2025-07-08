@@ -1,0 +1,87 @@
+/* Base Layout */
+.dashboard-container {
+  max-width: 1200px;
+  margin: 60px auto;
+  padding: 30px;
+  background: linear-gradient(145deg, #ffffff, #f0f0f0);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+  border-radius: 16px;
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Header */
+.dashboard-container h2 {
+  margin-bottom: 40px;
+  font-size: 2rem;
+  color: #2c3e50;
+  position: relative;
+}
+
+.dashboard-container h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 4px;
+  background-color: #3498db;
+  margin: 12px auto 0;
+  border-radius: 2px;
+}
+
+/* Grid */
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+}
+
+/* Card */
+.dashboard-card {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 24px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.07);
+  transition: all 0.3s ease-in-out;
+  border: 1px solid #eaeaea;
+  position: relative;
+  overflow: hidden;
+}
+
+.dashboard-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+  border-color: #3498db;
+}
+
+/* Card Heading */
+.dashboard-card h3 {
+  color: #3498db;
+  font-size: 1.4rem;
+  margin-bottom: 12px;
+}
+
+/* Card Text */
+.dashboard-card p {
+  color: #555;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* Optional animated gradient background for the entire body */
+body {
+  background: linear-gradient(135deg, #ecf0f1, #f7f9fb);
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+/* Mobile Friendly */
+@media (max-width: 768px) {
+  .dashboard-container {
+    padding: 20px 16px;
+  }
+
+  .dashboard-card {
+    text-align: center;
+  }
+}
